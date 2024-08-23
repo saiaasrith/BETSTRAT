@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Strategy Monitor</title>
+    <link rel="stylesheet" href="../css/popup.css">
+</head>
+<body>
+    <div class="popup-content">
+        <h1>Game Strategy Monitor</h1>
+
+        <!-- Settings Section -->
+        <div class="settings">
+            <label for="lossLimit">Set Loss Limit:</label>
+            <input type="number" id="lossLimit" min="1" value="5">
+            <button id="saveSettings">Save Settings</button>
+        </div>
+
+        <!-- Analytics Section -->
+        <div class="analytics">
+            <h2>Betting Analytics</h2>
+            <p>Total Bets: <span id="totalBets">0</span></p>
+            <p>Average Bet: <span id="averageBet">0</span></p>
+            <p>Total Wins: <span id="totalWins">0</span></p>
+            <p>Total Losses: <span id="totalLosses">0</span></p>
+        </div>
+
+        <!-- Feedback Section -->
+        <div class="feedback">
+            <h2>Strategy Feedback</h2>
+            <p id="feedbackMessage">No feedback yet.</p>
+        </div>
+
+        <button id="resetLosses">Reset Loss Count</button>
+    </div>
+    <script src="../js/popup.js"></script>
+</body>
+</html>
+

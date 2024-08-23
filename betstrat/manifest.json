@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Game Strategy Monitor & Loss Prevention",
+  "version": "1.0",
+  "description": "Monitors user strategies in games, analyzes losses and profits, and alerts the user to stop playing when losses reach a certain limit.",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "notifications"
+  ],
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://india.1xbet.com/"],
+      "js": ["js/content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "html/popup.html",
+    "default_icon": {
+      "50": "assets/icon.png"
+    }
+  },
+  "icons": {
+    "50": "assets/icon.png"
+  },
+  "host_permissions": [
+    "https://india.1xbet.com/"
+  ]
+}
